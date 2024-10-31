@@ -55,6 +55,7 @@ function formataHora($hora){
 <?php foreach ($posts as $post): ?>
     <h2><a href="post.php?id=<?= $post['id'] ?>"><?= htmlspecialchars($post['title']) ?></a></h2>
     <p>Postado por <?= htmlspecialchars($post['author']) ?> às <?= formataHora(htmlspecialchars($post['created_at'])) ?> em <?= formataData(htmlspecialchars($post['created_at'])) ?></p>
+    <img src="<?= htmlspecialchars($post['image_url']) ?>" alt="thumbnail do post" width="200" height="200"/>
     <hr>
 <?php endforeach; ?>
 
